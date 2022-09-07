@@ -7,38 +7,14 @@ def switcher(lenghtOfBinaryNumber, binaryNumber): #Populating an array with the 
     if lenghtOfBinaryNumber == 1:
         table[-1] = binaryNumber
         return table
-    elif lenghtOfBinaryNumber == 2:
-        for i in range(1, 3):
-            table[-i] = int(binaryNumber[-i])
-        return table
-    elif lenghtOfBinaryNumber == 3:
-        for i in range(1, 4):
-            table[-i] = int(binaryNumber[-i])
-        return table
-    elif lenghtOfBinaryNumber == 4:
-        for i in range(1, 5):
-            table[-i] = int(binaryNumber[-i])
-        return table
-    elif lenghtOfBinaryNumber == 5:
-        for i in range(1, 6):
-            table[-i] = int(binaryNumber[-i])
-        return table
-    elif lenghtOfBinaryNumber == 6:
-        for i in range(1, 7):
-            table[-i] = int(binaryNumber[-i])
-        return table
-    elif lenghtOfBinaryNumber == 7:
-        for i in range(1, 8):
-            table[-i] = int(binaryNumber[-i])
-        return table
-    elif lenghtOfBinaryNumber == 8:
-        for i in range(1, 9):
-            table[-i] = int(binaryNumber[-i])
-        return table
-    else:
+    elif lenghtOfBinaryNumber>8:
         print("You entered to big number")
         exit()
-
+    else:
+        for i in range(1, lenghtOfBinaryNumber+1):
+            table[-i] = int(binaryNumber[-i])
+        return table    
+    
 
 def cellularAutomata(steps, steps2): #Calculation of CA performance
     area = np.zeros((steps, steps), dtype=int)
